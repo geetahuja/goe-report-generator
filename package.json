@@ -1,0 +1,14 @@
+{
+  "name": "goe-report-generator",
+  "version": "1.0.0",
+  "description": "Generates MCLS Lean Intermediate/Completion Stage reports formatted exactly like the GOE-164 golden sample.",
+  "main": "engine/generate_report.js",
+  "scripts": {
+    "generate": "node engine/generate_report.js"
+  },
+  "dependencies": {
+    "docx": "^9.6.1",
+    "image-size": "^2.0.2",
+    "jszip": "^3.10.1"
+  }
+}

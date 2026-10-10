@@ -1,0 +1,514 @@
+{
+  "goeCode": "GOE/MCLS/QCI/MH-213",
+  "consultantOrg": "AB Associates",
+  "consultantNames": "Mr. Parvat Gangurde",
+  "periodStart": "Not provided in Units Text Information",
+  "periodEnd": "Not provided in Units Text Information",
+  "location": "Nashik",
+  "totalUnits": 7,
+  "unitsParticipated": 7,
+  "preparedByName": "Mr. Parvat Gangurde, AB Associates",
+  "preparedByRole": "Lean Manufacturing Consultant",
+  "uspOfGoe": "The GOE brings together diverse MSME manufacturing units covering Tools and dies, Jig's and fixtures; Designing & Manufacturing of HT/LT Control and Distribution Panel System; Fabrication of metering box, Duct cabinets, Lvs, Crp, Doors and other loose parts; Corrugated boxes, Mono cartons, Polybags, with processes spanning Die Manufacturing; Assembling, Wiring and Testing; Punching, Bending, Grinding, Welding, quality inspection; RM-Corrugation Pasting-RS4, Punching, Stitching-Packing-Dispatch. A common focus is workplace organisation, standard work, visual management and continuous improvement",
+  "assets": {
+    "watermark": "assets/watermark.png",
+    "abLogo": "assets/ab_logo.png",
+    "coverLogosBand": "assets/cover_logos_band.png",
+    "footerBar": "assets/footer_bar.png"
+  },
+  "cumulativeOutcomeImage": "prepared_assets/goe_cumulative-1.png",
+  "cumulativeOutcomeImages": [
+    "prepared_assets/goe_cumulative-1.png"
+  ],
+  "cumulativeOutcomeNote": "The above figures are as per IT system",
+  "acknowledgement": {
+    "intro": "It has been a true pleasure to be a part of MSME Competitive (Lean) Scheme (GOE/MCLS/QCI/MH-213) as a Lean Manufacturing Consultant. Overall, it has been a mutually value adding program and we believe that we too have learnt some things under this program.",
+    "msmeThanks": {
+      "pre": "We express our heartfelt gratitude towards,",
+      "lines": [
+        "MSME DI team for their support and coordination throughout the program."
+      ]
+    },
+    "qciThanks": {
+      "pre": "Our sincere thanks to,",
+      "lines": [
+        "QCI Team Members for their constant support & coordination throughout the program."
+      ]
+    },
+    "auditorThanks": "Our thanks to auditors from QCI, QCI-appointed auditors, for their valuable guidance and points for improvement.",
+    "unitThanksPre": "This program wouldn't have been successful without the cooperation, involvement and support from the unit owners & their teams. We thank,",
+    "closingLine": "We also thank Lean Coordinators of all the units and Lean team members for their active involvement & participation to make this program successful.",
+    "signOff": "Mr. Parvat Gangurde & Team at AB Associates"
+  },
+  "units": [
+    {
+      "name": "Idea Tools",
+      "address": "Flat No:- PLOT NO.124, Building:- NEAR SAKAL CIRCLE, Road/Street:- SATPUR, Village/Town:- MIDC SATPUR, Block:- SATPUR, City:- NASHIK",
+      "products": "Tools and dies, Jig's and fixtures",
+      "turnover": [
+        {
+          "fy": "2024-25",
+          "value": "409"
+        },
+        {
+          "fy": "2023-24",
+          "value": "277"
+        },
+        {
+          "fy": "2022-23",
+          "value": "135"
+        }
+      ],
+      "leanCoordinatorName": "Mr. Rahul Raosaheb Walaikar",
+      "phone": "9356850729",
+      "email": "ideastool22@gmail.com",
+      "overview": {
+        "productFamily": "",
+        "leanTools": "",
+        "goodPractices": "",
+        "beforeAfter": ""
+      },
+      "kpiImage": "prepared_assets/Idea_Tools/kpi-1.png",
+      "savingsImage": "prepared_assets/Idea_Tools/savings-1.png",
+      "kaizenImages": [
+        "prepared_assets/Idea_Tools/kaizen_G213_IDEA_TOOLS_kaizens_1-10-1.png",
+        "prepared_assets/Idea_Tools/kaizen_G213_IDEA_TOOLS_kaizens_1-10-2.png",
+        "prepared_assets/Idea_Tools/kaizen_G213_IDEA_TOOLS_kaizens_1-10-3.png"
+      ],
+      "ownerImage": "prepared_assets/Idea_Tools/owner.png",
+      "ownerName": "Mr. Vishwa Mohan Singh",
+      "ownerRole": "Director, Idea Tools",
+      "testimonial": [
+        "We, Idea Tools, sincerely thank the Ministry of Micro, Small & Medium Enterprises (MSME), Government of India, the Quality Council of India (QCI), and the Lean Manufacturing Consultant, Mr. Parvat Gangurde and his team from AB Associates, for their valuable guidance and support during the implementation of Lean Manufacturing Practices under the MCLS scheme.",
+        "Our unit is engaged in the manufacture of Tools and dies, Jig's and fixtures, with core processes including Die Manufacturing. The Lean journey has provided a structured approach to strengthen workplace practices, standardisation and continuous improvement around these operations. The focus is to sustain disciplined practices and use systematic problem-solving to improve operational performance.",
+        "We remain committed to sustaining these improvements and progressing toward the Advanced Stage of Lean Implementation for long-term operational excellence."
+      ],
+      "observations": [
+        "Idea Tools is engaged in the manufacture of Tools and dies, Jig's and fixtures, with the key manufacturing process identified as Die Manufacturing. The unit profile indicates a process-oriented manufacturing setup where systematic control and standardisation can support consistent performance.",
+        "Based on the available unit information, the Lean implementation is positioned around practical shop-floor improvement, including 5S, Kaizen and Daily Work Management. For the reported product and process family, continued focus on standard work, visual controls, workplace organisation and data-based problem solving will help sustain the improvements and support further Lean maturity."
+      ],
+      "recommendationsIntro": [
+        "Idea Tools has laid a solid foundation in lean manufacturing and now stands at a promising inflection point to deepen its transformation."
+      ],
+      "recommendations": [
+        {
+          "title": "SMED",
+          "body": "Faster die/tool changeovers will reduce setup time and support smaller batch sizes."
+        },
+        {
+          "title": "Advanced 5S and Visual Management",
+          "body": "More sophisticated visual controls and layered audits will further reduce searching time and minor delays."
+        },
+        {
+          "title": "7 QC Tools",
+          "body": "Data-based problem solving will help identify and reduce recurring defects systematically."
+        }
+      ],
+      "recommendationsClosing": [
+        "Overall, the unit exhibits strong potential to adopt advanced lean tools and systems, and is well-positioned to achieve sustained excellence and competitive advantage."
+      ]
+    },
+    {
+      "name": "Neha Enterprises (Ambad)",
+      "address": "Flat No:- PLOT NO. D49,, Building:- SHED F, Road/Street:- MIDC ROAD, Village/Town:- MIDC AMBAD, Block:- AMBAD, City:- NASHIK",
+      "products": "Designing & Manufacturing of HT/LT Control and Distribution Panel System",
+      "turnover": [
+        {
+          "fy": "2024-25",
+          "value": "623.3"
+        },
+        {
+          "fy": "2023-24",
+          "value": "576.8"
+        },
+        {
+          "fy": "2022-23",
+          "value": "574.9"
+        }
+      ],
+      "leanCoordinatorName": "Mrs. Priyanka Amol Bhadane",
+      "phone": "7720072118",
+      "email": "priyanka@nehaenterprises.org",
+      "overview": {
+        "productFamily": "",
+        "leanTools": "",
+        "goodPractices": "",
+        "beforeAfter": ""
+      },
+      "kpiImage": "prepared_assets/Neha_Enterprises_Ambad/kpi-1.png",
+      "savingsImage": "prepared_assets/Neha_Enterprises_Ambad/savings-1.png",
+      "kaizenImages": [
+        "prepared_assets/Neha_Enterprises_Ambad/kaizen_KAIZEN-14-1.png",
+        "prepared_assets/Neha_Enterprises_Ambad/kaizen_KAIZEN-11-1.png",
+        "prepared_assets/Neha_Enterprises_Ambad/kaizen_KAIZEN-12-1.png"
+      ],
+      "ownerImage": "prepared_assets/Neha_Enterprises_Ambad/owner.png",
+      "ownerName": "Mr. Sampat Choudhary",
+      "ownerRole": "Director, Neha Enterprises (Ambad)",
+      "testimonial": [
+        "We, Neha Enterprises (Ambad), sincerely thank the Ministry of Micro, Small & Medium Enterprises (MSME), Government of India, the Quality Council of India (QCI), and the Lean Manufacturing Consultant, Mr. Parvat Gangurde and his team from AB Associates, for their valuable guidance and support during the implementation of Lean Manufacturing Practices under the MCLS scheme.",
+        "Our unit is engaged in the manufacture of Designing & Manufacturing of HT/LT Control and Distribution Panel System, with core processes including Assembling, Wiring and Testing. The Lean journey has provided a structured approach to strengthen workplace practices, standardisation and continuous improvement around these operations. The focus is to sustain disciplined practices and use systematic problem-solving to improve operational performance.",
+        "We remain committed to sustaining these improvements and progressing toward the Advanced Stage of Lean Implementation for long-term operational excellence."
+      ],
+      "observations": [
+        "Neha Enterprises (Ambad) is engaged in the manufacture of Designing & Manufacturing of HT/LT Control and Distribution Panel System, with the key manufacturing process identified as Assembling, Wiring and Testing. The unit profile indicates a process-oriented manufacturing setup where systematic control and standardisation can support consistent performance.",
+        "Based on the available unit information, the Lean implementation is positioned around practical shop-floor improvement, including 5S, Kaizen and Daily Work Management. For the reported product and process family, continued focus on standard work, visual controls, workplace organisation and data-based problem solving will help sustain the improvements and support further Lean maturity."
+      ],
+      "recommendationsIntro": [
+        "Neha Enterprises (Ambad) has laid a solid foundation in lean manufacturing and now stands at a promising inflection point to deepen its transformation."
+      ],
+      "recommendations": [
+        {
+          "title": "Standard Work",
+          "body": "Standardising the assembly/wiring sequence reduces variation and dependency on individual operators."
+        },
+        {
+          "title": "Advanced 5S and Visual Management",
+          "body": "More sophisticated visual controls and layered audits will further reduce searching time and minor delays."
+        },
+        {
+          "title": "7 QC Tools",
+          "body": "Data-based problem solving will help identify and reduce recurring defects systematically."
+        }
+      ],
+      "recommendationsClosing": [
+        "Overall, the unit exhibits strong potential to adopt advanced lean tools and systems, and is well-positioned to achieve sustained excellence and competitive advantage."
+      ]
+    },
+    {
+      "name": "Neha Enterprises (Ozar)",
+      "address": "Flat No:- Gat No. 1986/1/2, Building:- Sidhhivinayak Warehouse, Road/Street:- Mumbai Agra Highway, Village/Town:- Ozer, Block:- Ozer Road, City:- Nashik",
+      "products": "Fabrication of metering box, Duct cabinets, Lvs, Crp, Doors and other loose parts",
+      "turnover": [
+        {
+          "fy": "2024-25",
+          "value": "720"
+        },
+        {
+          "fy": "2023-24",
+          "value": "600"
+        },
+        {
+          "fy": "2022-23",
+          "value": "540"
+        }
+      ],
+      "leanCoordinatorName": "Mrs. Priyanka Amol Bhadane",
+      "phone": "7720072118",
+      "email": "priyanka@nehaenterprises.org",
+      "overview": {
+        "productFamily": "",
+        "leanTools": "",
+        "goodPractices": "",
+        "beforeAfter": ""
+      },
+      "kpiImage": "prepared_assets/Neha_Enterprises_Ozer/kpi-1.png",
+      "savingsImage": "prepared_assets/Neha_Enterprises_Ozer/savings-1.png",
+      "kaizenImages": [
+        "prepared_assets/Neha_Enterprises_Ozer/kaizen_GOE-213_Neha_Enterprises_Ozer_Kaizen_Training_and_All_kaizens-1.png",
+        "prepared_assets/Neha_Enterprises_Ozer/kaizen_GOE-213_Neha_Enterprises_Ozer_Kaizen_Training_and_All_kaizens-2.png",
+        "prepared_assets/Neha_Enterprises_Ozer/kaizen_GOE-213_Neha_Enterprises_Ozer_Kaizen_Training_and_All_kaizens-3.png"
+      ],
+      "ownerImage": "prepared_assets/Neha_Enterprises_Ozer/owner.png",
+      "ownerName": "Mr. Mohan Sampat Choudhary",
+      "ownerRole": "Director, Neha Enterprises (Ozar)",
+      "testimonial": [
+        "We, Neha Enterprises (Ozar), sincerely thank the Ministry of Micro, Small & Medium Enterprises (MSME), Government of India, the Quality Council of India (QCI), and the Lean Manufacturing Consultant, Mr. Parvat Gangurde and his team from AB Associates, for their valuable guidance and support during the implementation of Lean Manufacturing Practices under the MCLS scheme.",
+        "Our unit is engaged in the manufacture of Fabrication of metering box, Duct cabinets, Lvs, Crp, Doors and other loose parts, with core processes including Punching, Bending, Grinding, Welding, quality inspection. The Lean journey has provided a structured approach to strengthen workplace practices, standardisation and continuous improvement around these operations. The focus is to sustain disciplined practices and use systematic problem-solving to improve operational performance.",
+        "We remain committed to sustaining these improvements and progressing toward the Advanced Stage of Lean Implementation for long-term operational excellence."
+      ],
+      "observations": [
+        "Neha Enterprises (Ozar) is engaged in the manufacture of Fabrication of metering box, Duct cabinets, Lvs, Crp, Doors and other loose parts, with the key manufacturing process identified as Punching, Bending, Grinding, Welding, quality inspection. The unit profile indicates a process-oriented manufacturing setup where systematic control and standardisation can support consistent performance.",
+        "Based on the available unit information, the Lean implementation is positioned around practical shop-floor improvement, including 5S, Kaizen and Daily Work Management. For the reported product and process family, continued focus on standard work, visual controls, workplace organisation and data-based problem solving will help sustain the improvements and support further Lean maturity."
+      ],
+      "recommendationsIntro": [
+        "Neha Enterprises (Ozar) has laid a solid foundation in lean manufacturing and now stands at a promising inflection point to deepen its transformation."
+      ],
+      "recommendations": [
+        {
+          "title": "Poka Yoke",
+          "body": "Error-proofing the welding/joining process will reduce rework and improve first-time-right quality."
+        },
+        {
+          "title": "SMED",
+          "body": "Faster die/tool changeovers will reduce setup time and support smaller batch sizes."
+        },
+        {
+          "title": "TPM",
+          "body": "Preventive/autonomous maintenance on machining centres will reduce breakdown-related downtime."
+        }
+      ],
+      "recommendationsClosing": [
+        "Overall, the unit exhibits strong potential to adopt advanced lean tools and systems, and is well-positioned to achieve sustained excellence and competitive advantage."
+      ]
+    },
+    {
+      "name": "M/S Amerco Box Pack Pvt. Ltd.",
+      "address": "Flat No:- GUT NO.38, Building:- JAULKE, Road/Street:- DINDORI JAULKE ROAD, Village/Town:- AT POST JAULKE, Block:- JAULKE, City:- NASHIK",
+      "products": "Corrugated boxes, Mono cartons, Polybags",
+      "turnover": [
+        {
+          "fy": "2024-25",
+          "value": "0"
+        },
+        {
+          "fy": "2023-24",
+          "value": "0"
+        },
+        {
+          "fy": "2022-23",
+          "value": "0"
+        }
+      ],
+      "leanCoordinatorName": "Mrs. Priyanka Waghamare",
+      "phone": "Not provided in Units Text Information",
+      "email": "Not provided in Units Text Information",
+      "overview": {
+        "productFamily": "",
+        "leanTools": "",
+        "goodPractices": "",
+        "beforeAfter": ""
+      },
+      "kpiImage": "prepared_assets/MS_Amerco_Box_Pack_Pvt_Ltd/kpi-1.png",
+      "savingsImage": "prepared_assets/MS_Amerco_Box_Pack_Pvt_Ltd/savings-1.png",
+      "kaizenImages": [
+        "prepared_assets/MS_Amerco_Box_Pack_Pvt_Ltd/kaizen_GOE_213_Amerco_Box_Pack_Pvt_Ltd_Kaizens-1.png",
+        "prepared_assets/MS_Amerco_Box_Pack_Pvt_Ltd/kaizen_GOE_213_Amerco_Box_Pack_Pvt_Ltd_Kaizens-2.png",
+        "prepared_assets/MS_Amerco_Box_Pack_Pvt_Ltd/kaizen_GOE_213_Amerco_Box_Pack_Pvt_Ltd_Kaizens-3.png"
+      ],
+      "ownerImage": null,
+      "ownerName": "Mr. Abhijeet Tatiya",
+      "ownerRole": "Director, M/S Amerco Box Pack Pvt. Ltd.",
+      "testimonial": [
+        "We, M/S Amerco Box Pack Pvt. Ltd., sincerely thank the Ministry of Micro, Small & Medium Enterprises (MSME), Government of India, the Quality Council of India (QCI), and the Lean Manufacturing Consultant, Mr. Parvat Gangurde and his team from AB Associates, for their valuable guidance and support during the implementation of Lean Manufacturing Practices under the MCLS scheme.",
+        "Our unit is engaged in the manufacture of Corrugated boxes, Mono cartons, Polybags, with core processes including RM-Corrugation Pasting-RS4, Punching, Stitching-Packing-Dispatch. The Lean journey has provided a structured approach to strengthen workplace practices, standardisation and continuous improvement around these operations. The focus is to sustain disciplined practices and use systematic problem-solving to improve operational performance.",
+        "We remain committed to sustaining these improvements and progressing toward the Advanced Stage of Lean Implementation for long-term operational excellence."
+      ],
+      "observations": [
+        "M/S Amerco Box Pack Pvt. Ltd. is engaged in the manufacture of Corrugated boxes, Mono cartons, Polybags, with the key manufacturing process identified as RM-Corrugation Pasting-RS4, Punching, Stitching-Packing-Dispatch. The unit profile indicates a process-oriented manufacturing setup where systematic control and standardisation can support consistent performance.",
+        "Based on the available unit information, the Lean implementation is positioned around practical shop-floor improvement, including 5S, Kaizen and Daily Work Management. For the reported product and process family, continued focus on standard work, visual controls, workplace organisation and data-based problem solving will help sustain the improvements and support further Lean maturity."
+      ],
+      "recommendationsIntro": [
+        "M/S Amerco Box Pack Pvt. Ltd. has laid a solid foundation in lean manufacturing and now stands at a promising inflection point to deepen its transformation."
+      ],
+      "recommendations": [
+        {
+          "title": "SMED",
+          "body": "Faster die/tool changeovers will reduce setup time and support smaller batch sizes."
+        },
+        {
+          "title": "Line Balancing",
+          "body": "Balancing the corrugation-to-dispatch line will smooth flow and reduce WIP buildup."
+        },
+        {
+          "title": "Advanced 5S and Visual Management",
+          "body": "More sophisticated visual controls and layered audits will further reduce searching time and minor delays."
+        }
+      ],
+      "recommendationsClosing": [
+        "Overall, the unit exhibits strong potential to adopt advanced lean tools and systems, and is well-positioned to achieve sustained excellence and competitive advantage."
+      ]
+    },
+    {
+      "name": "SP Enterprises",
+      "address": "Flat No:- Plot no. M-36, Building:- MIDC Area, Road/Street:- MIDC Ambad, Village/Town:- Ambad, Block:- M, City:- Nashik",
+      "products": "Cable tray and Control panels",
+      "turnover": [
+        {
+          "fy": "2024-25",
+          "value": "465"
+        },
+        {
+          "fy": "2023-24",
+          "value": "239"
+        },
+        {
+          "fy": "2022-23",
+          "value": "48"
+        }
+      ],
+      "leanCoordinatorName": "Mr. Pankaj Ramesh Gharte",
+      "phone": "Not provided in Units Text Information",
+      "email": "Not provided in Units Text Information",
+      "overview": {
+        "productFamily": "",
+        "leanTools": "",
+        "goodPractices": "",
+        "beforeAfter": ""
+      },
+      "kpiImage": null,
+      "savingsImage": null,
+      "kaizenImages": [
+        "prepared_assets/SP_Enterprises/kaizen_GOE_213_SP_Enterprises_Kaizen_Reward_System_SOP-1.png",
+        "prepared_assets/SP_Enterprises/kaizen_GOE_213_SP_Enterprises_Kaizen_Suggestion_Box_and_Kaizen_Suggestion_Slips-1.png",
+        "prepared_assets/SP_Enterprises/kaizen_GOE_213_SP_Enterprises_Kaizen_Suggestion_Box_and_Kaizen_Suggestion_Slips-2.png"
+      ],
+      "ownerImage": null,
+      "ownerName": "Mrs. Swapna Pankaj Gharte",
+      "ownerRole": "Director, SP Enterprises",
+      "testimonial": [
+        "We, SP Enterprises, sincerely thank the Ministry of Micro, Small & Medium Enterprises (MSME), Government of India, the Quality Council of India (QCI), and the Lean Manufacturing Consultant, Mr. Parvat Gangurde and his team from AB Associates, for their valuable guidance and support during the implementation of Lean Manufacturing Practices under the MCLS scheme.",
+        "Our unit is engaged in the manufacture of Cable tray and Control panels, with core processes including Punching, bending, welding, assembly. The Lean journey has provided a structured approach to strengthen workplace practices, standardisation and continuous improvement around these operations. The focus is to sustain disciplined practices and use systematic problem-solving to improve operational performance.",
+        "We remain committed to sustaining these improvements and progressing toward the Advanced Stage of Lean Implementation for long-term operational excellence."
+      ],
+      "observations": [
+        "SP Enterprises is engaged in the manufacture of Cable tray and Control panels, with the key manufacturing process identified as Punching, bending, welding, assembly. The unit profile indicates a process-oriented manufacturing setup where systematic control and standardisation can support consistent performance.",
+        "Based on the available unit information, the Lean implementation is positioned around practical shop-floor improvement, including 5S, Kaizen and Daily Work Management. For the reported product and process family, continued focus on standard work, visual controls, workplace organisation and data-based problem solving will help sustain the improvements and support further Lean maturity."
+      ],
+      "recommendationsIntro": [
+        "SP Enterprises has laid a solid foundation in lean manufacturing and now stands at a promising inflection point to deepen its transformation."
+      ],
+      "recommendations": [
+        {
+          "title": "Poka Yoke",
+          "body": "Error-proofing the welding/joining process will reduce rework and improve first-time-right quality."
+        },
+        {
+          "title": "SMED",
+          "body": "Faster die/tool changeovers will reduce setup time and support smaller batch sizes."
+        },
+        {
+          "title": "Standard Work",
+          "body": "Standardising the assembly/wiring sequence reduces variation and dependency on individual operators."
+        }
+      ],
+      "recommendationsClosing": [
+        "Overall, the unit exhibits strong potential to adopt advanced lean tools and systems, and is well-positioned to achieve sustained excellence and competitive advantage."
+      ]
+    },
+    {
+      "name": "Swami Samarth Industries",
+      "address": "Flat No:- M-110, Building:- M.I.D.C Ambad, Road/Street:- Near Ambad Village, Village/Town:- Nashik, Block:- M-110, City:- Nashik",
+      "products": "Shafts",
+      "turnover": [
+        {
+          "fy": "2024-25",
+          "value": "292.43"
+        },
+        {
+          "fy": "2023-24",
+          "value": "265.43"
+        },
+        {
+          "fy": "2022-23",
+          "value": "111.96"
+        }
+      ],
+      "leanCoordinatorName": "Mr. Mahesh Nerkar",
+      "phone": "7030161104",
+      "email": "engg.ssi.m110@gmai.com",
+      "overview": {
+        "productFamily": "",
+        "leanTools": "",
+        "goodPractices": "",
+        "beforeAfter": ""
+      },
+      "kpiImage": null,
+      "savingsImage": null,
+      "kaizenImages": [
+        "prepared_assets/Swami_Samarth_Industries/kaizen_GOE_213_Swami_Samartha_Industries_Kaizen_Training-1.png",
+        "prepared_assets/Swami_Samarth_Industries/kaizen_GOE_213_Swami_Samartha_Industries_kaizen_box_&_Kaizen_Slip-1.png",
+        "prepared_assets/Swami_Samarth_Industries/kaizen_GOE_213_Swami_Samartha_Industries_kaizen_box_&_Kaizen_Slip-2.png"
+      ],
+      "ownerImage": null,
+      "ownerName": "Mr. Nikhil Goswami",
+      "ownerRole": "Director, Swami Samarth Industries",
+      "testimonial": [
+        "We, Swami Samarth Industries, sincerely thank the Ministry of Micro, Small & Medium Enterprises (MSME), Government of India, the Quality Council of India (QCI), and the Lean Manufacturing Consultant, Mr. Parvat Gangurde and his team from AB Associates, for their valuable guidance and support during the implementation of Lean Manufacturing Practices under the MCLS scheme.",
+        "Our unit is engaged in the manufacture of Shafts, with core processes including Bar Cutting, Facing, Centering, Drilling, Tapping, Turning, Keyway Milling, Dimple Hole Drilling. The Lean journey has provided a structured approach to strengthen workplace practices, standardisation and continuous improvement around these operations. The focus is to sustain disciplined practices and use systematic problem-solving to improve operational performance.",
+        "We remain committed to sustaining these improvements and progressing toward the Advanced Stage of Lean Implementation for long-term operational excellence."
+      ],
+      "observations": [
+        "Swami Samarth Industries is engaged in the manufacture of Shafts, with the key manufacturing process identified as Bar Cutting, Facing, Centering, Drilling, Tapping, Turning, Keyway Milling, Dimple Hole Drilling. The unit profile indicates a process-oriented manufacturing setup where systematic control and standardisation can support consistent performance.",
+        "Based on the available unit information, the Lean implementation is positioned around practical shop-floor improvement, including 5S, Kaizen and Daily Work Management. For the reported product and process family, continued focus on standard work, visual controls, workplace organisation and data-based problem solving will help sustain the improvements and support further Lean maturity."
+      ],
+      "recommendationsIntro": [
+        "Swami Samarth Industries has laid a solid foundation in lean manufacturing and now stands at a promising inflection point to deepen its transformation."
+      ],
+      "recommendations": [
+        {
+          "title": "TPM",
+          "body": "Preventive/autonomous maintenance on machining centres will reduce breakdown-related downtime."
+        },
+        {
+          "title": "Advanced 5S and Visual Management",
+          "body": "More sophisticated visual controls and layered audits will further reduce searching time and minor delays."
+        },
+        {
+          "title": "7 QC Tools",
+          "body": "Data-based problem solving will help identify and reduce recurring defects systematically."
+        }
+      ],
+      "recommendationsClosing": [
+        "Overall, the unit exhibits strong potential to adopt advanced lean tools and systems, and is well-positioned to achieve sustained excellence and competitive advantage."
+      ]
+    },
+    {
+      "name": "Laxmi Industries",
+      "address": "Flat No:- Datta Krupa plots, Building:- Near goolve college road, Road/Street:- Near goolve college road, Village/Town:- Vilholi, Block:- -, City:- Nashik",
+      "products": "Injection molded plastic parts",
+      "turnover": [
+        {
+          "fy": "2024-25",
+          "value": "300"
+        },
+        {
+          "fy": "2023-24",
+          "value": "250"
+        },
+        {
+          "fy": "2022-23",
+          "value": "50"
+        }
+      ],
+      "leanCoordinatorName": "Sandeep Vasantrao Gaikwad",
+      "phone": "7276729505",
+      "email": "laxmiindustries117@gmail.com",
+      "overview": {
+        "productFamily": "",
+        "leanTools": "",
+        "goodPractices": "",
+        "beforeAfter": ""
+      },
+      "kpiImage": null,
+      "savingsImage": null,
+      "kaizenImages": [
+        "prepared_assets/Laxmi_Industries/kaizen_GOE_213_Laxmi_Industries_Kaizen_Reward_System_SOP-1.png",
+        "prepared_assets/Laxmi_Industries/kaizen_GOE_213_Laxmi_Industries_Kaizen_Reward_System_SOP-2.png",
+        "prepared_assets/Laxmi_Industries/kaizen_GOE_213_Laxmi_Industries_Kaizen_Reward_System_SOP-3.png"
+      ],
+      "ownerImage": null,
+      "ownerName": "Pooja Sandeep Gaikwad",
+      "ownerRole": "Director, Laxmi Industries",
+      "testimonial": [
+        "We, Laxmi Industries, sincerely thank the Ministry of Micro, Small & Medium Enterprises (MSME), Government of India, the Quality Council of India (QCI), and the Lean Manufacturing Consultant, Mr. Parvat Gangurde and his team from AB Associates, for their valuable guidance and support during the implementation of Lean Manufacturing Practices under the MCLS scheme.",
+        "Our unit is engaged in the manufacture of Injection molded plastic parts, with core processes including Plastic Injection Molding, Tube Assembly. The Lean journey has provided a structured approach to strengthen workplace practices, standardisation and continuous improvement around these operations. The focus is to sustain disciplined practices and use systematic problem-solving to improve operational performance.",
+        "We remain committed to sustaining these improvements and progressing toward the Advanced Stage of Lean Implementation for long-term operational excellence."
+      ],
+      "observations": [
+        "Laxmi Industries is engaged in the manufacture of Injection molded plastic parts, with the key manufacturing process identified as Plastic Injection Molding, Tube Assembly. The unit profile indicates a process-oriented manufacturing setup where systematic control and standardisation can support consistent performance.",
+        "Based on the available unit information, the Lean implementation is positioned around practical shop-floor improvement, including 5S, Kaizen and Daily Work Management. For the reported product and process family, continued focus on standard work, visual controls, workplace organisation and data-based problem solving will help sustain the improvements and support further Lean maturity."
+      ],
+      "recommendationsIntro": [
+        "Laxmi Industries has laid a solid foundation in lean manufacturing and now stands at a promising inflection point to deepen its transformation."
+      ],
+      "recommendations": [
+        {
+          "title": "Standard Work",
+          "body": "Standardising the assembly/wiring sequence reduces variation and dependency on individual operators."
+        },
+        {
+          "title": "Process Capability",
+          "body": "Process-capability studies on critical dimensions will tighten first-time-right yield."
+        },
+        {
+          "title": "Advanced 5S and Visual Management",
+          "body": "More sophisticated visual controls and layered audits will further reduce searching time and minor delays."
+        }
+      ],
+      "recommendationsClosing": [
+        "Overall, the unit exhibits strong potential to adopt advanced lean tools and systems, and is well-positioned to achieve sustained excellence and competitive advantage."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "goeCode": "GOE/MCLS/QCI/MH-XXX",
+  "consultantOrg": "AB Associates",
+  "consultantNames": "Mr. ______",
+  "periodStart": "DD Month YYYY",
+  "periodEnd": "DD Month YYYY",
+  "location": "City",
+  "totalUnits": 0,
+  "unitsParticipated": 0,
+  "preparedByName": "Mr. ______, AB Associates",
+  "preparedByRole": "Lean Manufacturing Consultant",
+
+  "_comment_uspOfGoe": "Keep this at or under 80 words - the engine will hard-cap it anyway, but write it tight so nothing gets cut mid-sentence.",
+  "uspOfGoe": "One paragraph describing what ties this GOE's units together and what lean tools were used across them.",
+
+  "assets": {
+    "watermark": "../assets/watermark.png",
+    "abLogo": "../assets/ab_logo.png",
+    "coverLogosBand": "../assets/cover_logos_band.png",
+    "footerBar": "../assets/footer_bar.png"
+  },
+
+  "_comment_cumulative": "Run prepare_assets.py on the GOE-level 'Cumulative Outcome' PDF separately (it isn't inside any single unit's folder) and point to the PNG it produces.",
+  "cumulativeOutcomeImage": "PATH/TO/goe_cumulative-1.png",
+  "cumulativeOutcomeNote": "The above figures are as per IT system",
+
+  "acknowledgement": {
+    "intro": "It has been a true pleasure to be a part of MSME Competitive (Lean) Scheme (<GOE CODE>) as a Lean Manufacturing Consultant. Overall, it has been a mutually value adding program and we believe that we too have learnt some things under this program.",
+    "msmeThanks": { "pre": "We express our heartfelt gratitude towards,", "lines": ["Name, Designation (MSME DI, City)"] },
+    "qciThanks": { "pre": "Our sincere thanks to,", "lines": ["QCI Team Members for their constant support & coordination throughout the program."] },
+    "auditorThanks": "Our thanks to auditors from QCI for their valuable guidance and points for improvement.",
+    "unitThanksPre": "This program wouldn't have been successful without the cooperation, involvement and support from the unit owners & their teams. We thank,",
+    "closingLine": "We also thank Lean Coordinators of all the units and Lean team members for their active involvement & participation to make this program successful.",
+    "signOff": "Mr. ______ & Team at AB Associates"
+  },
+
+  "units": [
+    {
+      "_comment": "Duplicate this whole block once per unit, in the order they should appear (2.1, 2.2, ...).",
+      "name": "Unit Name",
+      "address": "Full address",
+      "products": "Product(s) manufactured",
+      "turnover": [
+        {"fy": "2024-25", "value": "0"},
+        {"fy": "2023-24", "value": "0"},
+        {"fy": "2022-23", "value": "0"}
+      ],
+      "leanCoordinatorName": "Name",
+      "phone": "Phone",
+      "email": "email@example.com",
+      "overview": {
+        "_comment": "GOE-164 leaves these blank (label + colon, no value) and puts a '(Kindly refer the attached unit PPT for this section)' note on the B heading instead - generate_report.js no longer renders these fields at all, they're kept only for backward-compat with older configs.",
+        "productFamily": "",
+        "leanTools": "",
+        "goodPractices": "",
+        "beforeAfter": ""
+      },
+      "_comment_images": "All image paths below should point to files produced by scripts/prepare_assets.py",
+      "kpiImage": "PATH/TO/kpi-1.png",
+      "savingsImage": "PATH/TO/savings-1.png",
+      "kaizenImages": [
+        "PATH/TO/kaizen-1.png",
+        "PATH/TO/kaizen-2.png",
+        "PATH/TO/kaizen-3.png"
+      ],
+      "ownerImage": "PATH/TO/owner.png",
+      "ownerName": "Mr./Mrs. ______",
+      "ownerRole": "Director/CEO, Unit Name",
+      "testimonial": [
+        "Opening thank-you paragraph (see sample_output for the standard wording).",
+        "1-3 paragraphs describing the unit's process, challenges before Lean, and impact of the tools used.",
+        "Closing commitment paragraph."
+      ],
+      "observations": [
+        "Opening paragraph describing the unit's starting condition.",
+        "1-2 paragraphs on training received, kaizens implemented, and overall progress."
+      ],
+      "recommendationsIntro": ["Unit Name has laid a solid foundation in lean manufacturing and now stands at a promising inflection point to deepen its transformation."],
+      "recommendations": [
+        {"title": "Recommendation title", "body": "One sentence of detail."}
+      ],
+      "recommendationsClosing": ["Overall, the unit exhibits strong potential to adopt advanced lean tools and systems, and is well-positioned to achieve sustained excellence and competitive advantage."]
+    }
+  ]
+}
