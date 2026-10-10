@@ -320,6 +320,7 @@ function buildHeader(isFirstPage = false) {
   const rule = { bottom: { style: BorderStyle.SINGLE, size: 6, color: "000000", space: 4 } };
   children.push(new Paragraph({
     tabStops: [{ type: "right", position: CONTENT_W }],
+    ...(isFirstPage ? {} : { border: rule }),
     children: [
       new TextRun({ text: `Intermediate Stage Completion Report (${cfg.goeCode})`, size: 18, font: FONT }),
       new TextRun({ text: "\t" }),
@@ -362,25 +363,15 @@ function buildFooter() {
 }
 
 // ---------- small helpers --------------------------------------------------
-// spacing/size/font/color values below are matched exactly to GOE-164's
-// actual styles.xml / document.xml (verified byte-for-byte against the
-// golden .docx, not estimated):
-//   Heading1 style: before=360 (18pt), after=80  (4pt)
-//   Heading2 style: before=160 (8pt),  after=80  (4pt)
-//   Heading3 style: before=160 (8pt),  after=80  (4pt)
-//   Body-text paragraphs: line=276/auto (1.15x), NOT single/exact 1.0x -
-//     this is the line spacing used on 21 of the 25 body paragraphs sampled
-//     from the golden file; the previous line:240/auto here was exact
-//     single-spacing, which reads visibly tighter line-to-line than GOE-164.
-// Using 240/auto (exact single spacing) and smaller before/after values
-// than the golden styles is what produced the "content sits too close under
-// the header" look - not the header's own position, which is untouched by
-// any of this.
+// spacing/size/font/color values below are matched exactly to GOE-164 (see
+// the block comment above the constants). All body-level paragraphs use
+// single line spacing (line:240/auto) with a small "before" gap and NO
+// "after" gap - the golden report never doubles up spacing before+after.
 function h1(text) {
   return new Paragraph({
     heading: HeadingLevel.HEADING_1,
     keepNext: true,
-    spacing: { before: 360, after: 80, line: 276, lineRule: "auto" },
+    spacing: { before: 160, after: 0, line: 240, lineRule: "auto" },
     children: [new TextRun({ text, color: BLUE, bold: false, size: 40, font: FONT_LIGHT })],
   });
 }
@@ -388,7 +379,7 @@ function h2(text) {
   return new Paragraph({
     heading: HeadingLevel.HEADING_2,
     keepNext: true,
-    spacing: { before: 160, after: 80, line: 276, lineRule: "auto" },
+    spacing: { before: 180, after: 0, line: 240, lineRule: "auto" },
     children: [new TextRun({ text, bold: false, size: 28, font: FONT_LIGHT, color: "000000" })],
   });
 }
@@ -396,7 +387,7 @@ function h3(text) {
   return new Paragraph({
     heading: HeadingLevel.HEADING_3,
     keepNext: true,
-    spacing: { before: 160, after: 80, line: 276, lineRule: "auto" },
+    spacing: { before: 180, after: 0, line: 240, lineRule: "auto" },
     children: [new TextRun({ text, bold: true, size: 24, font: FONT, color: "000000" })],
   });
 }
@@ -410,7 +401,7 @@ function h3WithNote(text, note, opts = {}) {
     heading: HeadingLevel.HEADING_3,
     keepNext: true,
     pageBreakBefore: opts.pageBreakBefore === true,
-    spacing: { before: 160, after: 80, line: 276, lineRule: "auto" },
+    spacing: { before: 180, after: 0, line: 240, lineRule: "auto" },
     children: [
       new TextRun({ text, bold: true, size: 24, font: FONT, color: "000000" }),
       new TextRun({ text: ` (${note})`, bold: false, size: 22, font: FONT, color: "000000" }),
@@ -419,14 +410,14 @@ function h3WithNote(text, note, opts = {}) {
 }
 function body(text, opts = {}) {
   return new Paragraph({
-    spacing: { before: 160, after: 0, line: 276, lineRule: "auto" },
+    spacing: { before: 160, after: 0, line: 240, lineRule: "auto" },
     children: [new TextRun({ text, size: 22, font: FONT, ...opts })],
   });
 }
 function bullet(children, opts = {}) {
   return new Paragraph({
     bullet: { level: 0 },
-    spacing: { before: 180, after: 0, line: 276, lineRule: "auto" },
+    spacing: { before: 180, after: 0, line: 240, lineRule: "auto" },
     keepLines: true,
     keepNext: opts.keepNext === true,
     children,
@@ -482,15 +473,7 @@ function capWords(s, n) {
 const COVER_LABEL_COLOR = "404040";
 function coverPage() {
   const children = [];
-  // before:860 (up from 600) - measured directly against GOE-164: the gap
-  // between the header's separator rule and this title line runs ~260
-  // twips (~13pt) shorter here than in the golden file at the same 600
-  // value. This only adds space ABOVE the title (i.e. below the header) -
-  // it does not move the header itself, and there's ample free space
-  // lower on the cover page (the "Prepared By" block ends well short of
-  // the bottom-anchored disclaimer frame) so this can't push anything
-  // onto page 2.
-  children.push(new Paragraph({ spacing: { before: 860, after: 200 }, alignment: AlignmentType.CENTER,
+  children.push(new Paragraph({ spacing: { before: 600, after: 200 }, alignment: AlignmentType.CENTER,
     children: [new TextRun({ text: "MCLS Lean Intermediate Stage Completion Report Of", size: 32, font: FONT, color: COVER_LABEL_COLOR })] }));
   children.push(new Paragraph({ spacing: { after: 500 }, alignment: AlignmentType.CENTER,
     children: [new TextRun({ text: cfg.goeCode, size: 32, font: FONT })] }));
@@ -544,45 +527,6 @@ function coverPage() {
 }
 
 
-// ---------- page-break-with-gap helper --------------------------------------
-// GOE-164's header sits noticeably farther above the body content than a
-// bare page break alone produces here. The obvious fix - adding
-// `spacing.before` to whatever paragraph lands first on the new page - does
-// NOT work: Word/LibreOffice both unconditionally ignore a paragraph's
-// `spacing.before` when that paragraph is the first one on a page (whether
-// the break arrived via an explicit PageBreak run or a `pageBreakBefore`
-// property on the paragraph itself). This was verified directly: setting
-// before anywhere from 0 to 800 twips on such a paragraph produced an
-// IDENTICAL rendered position every time.
-// The fix that works is a tiny near-invisible spacer paragraph carrying real
-// line-height (which is never suppressed the way paragraph spacing is),
-// marked with `pageBreakBefore` so IT starts the new page.
-//
-// This must NOT be done as a separate paragraph containing only a manual
-// `<w:br type="page"/>` run followed by a second spacer paragraph - that
-// two-paragraph form caused a real bug: if the content right before the
-// break already fills the current page almost exactly to its bottom edge,
-// that near-empty break-carrier paragraph's own line box (bigger than it
-// looks, since it uses the document's default 11pt style) can itself fail
-// to fit in the sliver of space remaining, spilling onto a page of its own
-// - producing a genuinely blank page before the real content resumes one
-// page later than intended. This was reproduced directly from a real
-// generated report: the page right after the GOE-level cumulative-outcome
-// table came out completely blank, pushing "2. Unit-Wise Summary" (and
-// every unit's KPI table after it) one full page later than it should be.
-// Using `pageBreakBefore` on the spacer paragraph itself avoids this
-// entirely, since it is then a single paragraph/property, not two separate
-// flow objects where the first can overflow independently of the second.
-function pageBreak() {
-  return [
-    new Paragraph({
-      pageBreakBefore: true,
-      spacing: { before: 0, after: 0, line: 240, lineRule: "auto" },
-      children: [new TextRun({ text: " ", size: 14, font: FONT, color: "FFFFFF" })],
-    }),
-  ];
-}
-
 // ---------- Acknowledgement -------------------------------------------------
 // Font sizes here are matched exactly to GOE-164's document.xml: the
 // "Acknowledgement" heading is sz=28 (14pt) - NOT 30/15pt, which is what the
@@ -593,14 +537,13 @@ function pageBreak() {
 // body() (11pt) is intentionally not reused here.
 function ackBody(text) {
   return new Paragraph({
-    spacing: { before: 160, after: 0, line: 276, lineRule: "auto" },
+    spacing: { before: 160, after: 0, line: 240, lineRule: "auto" },
     children: [new TextRun({ text, size: 24, font: FONT })],
   });
 }
 function acknowledgementPage() {
   const children = [];
   children.push(new Paragraph({ heading: HeadingLevel.HEADING_1, alignment: AlignmentType.CENTER, keepNext: true,
-    spacing: { after: 80 },
     children: [new TextRun({ text: "Acknowledgement", bold: true, size: 28, font: FONT, color: "000000" })] }));
   children.push(ackBody(cfg.acknowledgement.intro));
   if (cfg.acknowledgement.msmeThanks) {
@@ -631,7 +574,6 @@ function acknowledgementPage() {
 function indexPage() {
   return [
     new Paragraph({ heading: HeadingLevel.HEADING_1, alignment: AlignmentType.CENTER, keepNext: true,
-      spacing: { after: 80 },
       children: [new TextRun({ text: "Index", bold: false, size: 32, font: FONT_LIGHT, color: "000000" })] }),
     new TableOfContents("Index", { hyperlink: true, headingStyleRange: "1-3" }),
   ];
@@ -655,16 +597,8 @@ function introSection() {
     new TextRun({ text: "Unique Features/USP of GOE: ", bold: true, size: 22, font: FONT }),
     new TextRun({ text: usp, size: 22, font: FONT }),
   ]));
-  // "1.3 GOE-level Outcomes" flows naturally right after the USP bullet,
-  // exactly like GOE-164 itself: checked its real document.xml directly,
-  // and there is no forced page break here at all - "2. Unit-Wise Summary"
-  // later in that file only happens to start a fresh page because of where
-  // natural pagination landed for that specific report's content length
-  // (marked by Word's own <w:lastRenderedPageBreak/> cache, not a real
-  // break in the document structure). Forcing a break here, as a previous
-  // fix did, contradicts that and doesn't match the golden report.
   children.push(h2("1.3 GOE-level Outcomes"));
-  children.push(new Paragraph({ spacing: { after: 80 },
+  children.push(new Paragraph({ keepNext: true, spacing: { after: 80 },
     children: [new TextRun({ text: "Overall Outcome (for all units, cumulative)", size: 22, font: FONT })] }));
 
   // The cumulative outcome source is a multi-page PDF. Every rendered page
@@ -678,23 +612,7 @@ function introSection() {
       // for tables with fewer rows, leaving the image narrower than the
       // page's text width -- which is the "size alignment" mismatch against
       // the golden GOE-164 report (its cumulative table spans full width).
-      // keepNext:true binds this image only to its own caption
-      // (cfg.cumulativeOutcomeNote, pushed right after this loop) - not to
-      // the heading or label above, which deliberately have no such
-      // binding here, matching GOE-164's real document.xml (only its
-      // Heading2 style carries an inherent keepNext; nothing else in this
-      // section does). This narrow pairing was chosen after seeing both
-      // extremes fail on the real report that reproduced this: binding
-      // the whole heading+label+image+caption chain together (an earlier
-      // attempt) relocated the entire ~4-inch block whenever longer intro
-      // text left too little room, wasting most of two pages; no binding
-      // at all left the one-line caption stranded alone at the top of an
-      // otherwise blank page, since the image can run right up against
-      // the bottom margin on its own and leave no room for it. Binding
-      // only the image to its own caption means just those two move
-      // together on the rare occasion they don't fit, while the heading
-      // and label above stay on whatever page they were already on.
-      children.push(imageParagraph(img, CONTENT_W, { keepNext: true, maxH: 9000 }));
+      children.push(imageParagraph(img, CONTENT_W, { keepNext: false, maxH: 9000 }));
     });
     if (cfg.cumulativeOutcomeNote) children.push(italicNote(cfg.cumulativeOutcomeNote));
   } else {
@@ -711,7 +629,7 @@ function unitSection(u, idx) {
   // not before the first unit. Every unit after the first still starts
   // on its own fresh page, matching the golden report (2.2 starts a new
   // page, 2.3 starts a new page, etc.)
-  if (idx > 0) children.push(...pageBreak());
+  if (idx > 0) children.push(new Paragraph({ children: [new PageBreak()] }));
   children.push(h2(`2.${idx + 1} ${u.name.toUpperCase()}`));
 
   children.push(h3("A. Unit Profile"));
@@ -766,11 +684,7 @@ function unitSection(u, idx) {
     children.push(imageParagraph(resolveAsset(k), CONTENT_W, { keepNext: false, maxH }));
   });
 
-  // pageBreakBefore on the heading paragraph itself suffers the exact same
-  // spacing.before suppression described in pageBreak() above, so the break
-  // and the gap-spacer are inserted as separate preceding paragraphs instead.
-  children.push(...pageBreak());
-  children.push(new Paragraph({ heading: HeadingLevel.HEADING_3, keepNext: true, spacing: { before: 180, after: 0, line: 240, lineRule: "auto" }, children: [new TextRun({ text: "E. Testimonial from the MSME Owners:", bold: true, size: 24, font: FONT, color: "000000" })] }));
+  children.push(new Paragraph({ heading: HeadingLevel.HEADING_3, keepNext: true, pageBreakBefore: true, spacing: { before: 180, after: 0, line: 240, lineRule: "auto" }, children: [new TextRun({ text: "E. Testimonial from the MSME Owners:", bold: true, size: 24, font: FONT, color: "000000" })] }));
   if (u.ownerImage) {
     children.push(new Paragraph({ keepNext: true, spacing: { after: 100 },
       children: [pic(resolveAsset(u.ownerImage), 1800, 2200)] }));
@@ -809,7 +723,7 @@ function buildDocument() {
   // "2. Unit-Wise Summary" always starts a fresh page in GOE-164 (unit 2.1
   // then follows immediately underneath it on that same page - see the
   // idx>0 check in unitSection()).
-  const body4 = [...introSection(), ...pageBreak(), h1("2. Unit-Wise Summary")];
+  const body4 = [...introSection(), new Paragraph({ children: [new PageBreak()] }), h1("2. Unit-Wise Summary")];
   cfg.units.forEach((u, i) => { body4.push(...unitSection(u, i)); });
   body4.push(new Paragraph({ spacing: { before: 300 },
     children: [new TextRun({ text: "End of Report", italics: true, size: 22, font: FONT, color: "000000" })], alignment: AlignmentType.CENTER }));
@@ -846,11 +760,11 @@ function buildDocument() {
         footers: { default: buildFooter(), first: buildFooter() },
         children: [
           ...body1,
-          ...pageBreak(),
+          new Paragraph({ children: [new PageBreak()] }),
           ...body2,
-          ...pageBreak(),
+          new Paragraph({ children: [new PageBreak()] }),
           ...body3,
-          ...pageBreak(),
+          new Paragraph({ children: [new PageBreak()] }),
           ...body4,
         ],
       },
@@ -898,34 +812,6 @@ async function patchGoldenLayout(buf) {
     styles = styles.replace(match[0], block);
   }
   zip.file("word/styles.xml", styles);
-
-  // docx.js (the `docx` npm package) intermittently drops the `keepNext`
-  // paragraph property specifically from "C. Key Performance Indicators"
-  // and "D. Top 3 Kaizens in detail:" - and only those two headings, out of
-  // six per unit, on every single unit, 100% reproducibly - while every
-  // other Heading1/2/3 paragraph in the same document keeps it correctly.
-  // A minimal reproduction with the same heading sequence and a
-  // TableOfContents field did NOT reproduce this, so it's tied to some
-  // specific interaction in the real document's fuller content rather than
-  // heading order alone; rather than chase the exact internal cause
-  // further, every Heading1/2/3-styled paragraph in this app is always
-  // supposed to carry keepNext (all of h1()/h2()/h3()/h3WithNote() and the
-  // Acknowledgement/Index headings pass keepNext:true unconditionally), so
-  // guaranteeing it here for any that lost it is safe and correct - not a
-  // narrower fix that could accidentally miss a similar case elsewhere.
-  // Confirmed directly: without this, "C. Key Performance Indicators"
-  // orphaned alone at the bottom of a page while its KPI table image alone
-  // moved to the next page, wasting roughly half a page each time.
-  const documentXmlFile = zip.file("word/document.xml");
-  if (documentXmlFile) {
-    let documentXml = await documentXmlFile.async("string");
-    documentXml = documentXml.replace(
-      /<w:pPr><w:pStyle w:val="Heading[123]"\/>(?!<w:keepNext\/>)/g,
-      (m) => m.replace('"/>', '"/><w:keepNext/>')
-    );
-    zip.file("word/document.xml", documentXml);
-  }
-
   return await patchUniqueDrawingIds(zip);
 }
 
